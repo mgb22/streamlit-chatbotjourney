@@ -7,8 +7,8 @@ from typing import Optional, List
 
 st.set_page_config(layout="wide")
 
-EVENT_LIST_PIPE_URL = "https://api.tinybird.co/v0/pipes/example_bots_events_ids.json"
-EVENT_DATA_PIPE_URL = "https://api.tinybird.co/v0/pipes/example_bots_filter_by_event.json"
+EVENT_LIST_PIPE_URL = "https://api.tinybird.co/v0/pipes/bots_events.json"
+EVENT_DATA_PIPE_URL = "https://api.tinybird.co/v0/pipes/example_bots_user_sessions.json"
 AUTH_TOKEN = st.secrets['AUTH_TOKEN']
 
 
