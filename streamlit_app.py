@@ -84,7 +84,7 @@ def _get_plot_figure(data: pd.DataFrame, event_id: str, height: int = 1000) -> g
 
     if event_id != 'All':
         colors[labels.index(('1 - '+event_id))] = '#6E49FF'
-    for _, row in data.iterrows():f
+    for _, row in data.iterrows():
         value.append(int(row['value']))
         source.append(labels.index(row['source']))
         target.append(labels.index(row['target']))
