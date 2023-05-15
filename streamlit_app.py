@@ -84,7 +84,7 @@ def _get_plot_figure(data: pd.DataFrame, event_id: str, height: int = 1000) -> g
 
     if event_id != 'All':
         colors[labels.index(('1 - '+event_id))] = '#6E49FF'
-    for _, row in data.iterrows():
+    for _, row in data.iterrows():f
         value.append(int(row['value']))
         source.append(labels.index(row['source']))
         target.append(labels.index(row['target']))
@@ -94,7 +94,7 @@ def _get_plot_figure(data: pd.DataFrame, event_id: str, height: int = 1000) -> g
             thickness=20,
             label=lables_without_numbers,
             color=colors,
-            hovertemplate='%{label} (%{value} users)<br><b>Stats</b><br>Avg. Time: 1m 2s<br>Dropoff: 40%<br>CSAT: 4.32<br><b>Chosen paths</b><br>Feedback 46 (<b>66%</b>)<br> Handoff 21 (<b>30%</b>)<br>Fuera de horario 3 (<b>4%</b>)<br><b>Sources </b><br>Pedidos online 70 (<b>100%</b>)<extra></extra>',
+            hovertemplate='%{label} (%{int (value)} users)<br><b>Stats</b><br>Avg. Time: 1m 2s<br>Dropoff: 40%<br>CSAT: 4.32<br><b>Chosen paths</b><br>Feedback 46 (<b>66%</b>)<br> Handoff 21 (<b>30%</b>)<br>Fuera de horario 3 (<b>4%</b>)<br><b>Sources </b><br>Pedidos online 70 (<b>100%</b>)<extra></extra>',
         ),
         link=dict(
             source=source,
